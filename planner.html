@@ -10,9 +10,7 @@
 <body>
 
 <header>
-
 <nav class="navbar">
-
 <h2 class="logo">Awwal.</h2>
 
 <ul>
@@ -24,58 +22,34 @@
 </ul>
 
 </nav>
-
 </header>
 
 <section class="skills">
 
-<h2>Weekly Study Planner</h2>
+<h2>Study Planner</h2>
 
-<div class="cards">
+<form id="taskForm">
 
-<div class="card">
-<h3>Monday</h3>
-<p>✔ HTML & CSS Practice</p>
-</div>
+<input
+type="text"
+id="taskInput"
+placeholder="Enter a new task..."
+required>
 
-<div class="card">
-<h3>Tuesday</h3>
-<p>✔ JavaScript Practice</p>
-</div>
+<button type="submit">
+Add Task
+</button>
 
-<div class="card">
-<h3>Wednesday</h3>
-<p>✔ Git & GitHub</p>
-</div>
+</form>
 
-<div class="card">
-<h3>Thursday</h3>
-<p>✔ Build Mini Projects</p>
-</div>
-
-<div class="card">
-<h3>Friday</h3>
-<p>✔ Revise Notes</p>
-</div>
-
-<div class="card">
-<h3>Saturday</h3>
-<p>✔ Coding Challenges</p>
-</div>
-
-<div class="card">
-<h3>Sunday</h3>
-<p>✔ Rest & Plan Next Week</p>
-</div>
-
-</div>
+<ul id="taskList"></ul>
 
 </section>
 
+<script src="js/planner.js"></script>
+
 <footer>
-
 <p>© 2026 Awwal Muhammed</p>
-
 </footer>
 
 </body>
