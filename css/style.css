@@ -267,3 +267,37 @@ grid-template-columns:1fr;
 }
 
 }
+#taskForm{
+display:flex;
+gap:10px;
+justify-content:center;
+margin-bottom:30px;
+flex-wrap:wrap;
+}
+
+#taskInput{
+max-width:450px;
+}
+
+#taskList{
+list-style:none;
+max-width:700px;
+margin:auto;
+padding:0;
+}
+
+#taskList li{
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:#fff;
+margin:10px 0;
+padding:15px;
+border-radius:10px;
+box-shadow:0 4px 10px rgba(0,0,0,.1);
+}
+
+#taskList button{
+margin-left:8px;
+padding:8px 12px;
+}
