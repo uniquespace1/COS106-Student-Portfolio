@@ -39,3 +39,29 @@ footer{
     color:white;
     margin-top:30px;
 }
+.hero{
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+nav a:hover{
+    color:yellow;
+    transition:0.3s;
+}
+
+button:hover{
+    background:#0056b3;
+    color:white;
+    cursor:pointer;
+    transition:0.3s;
+}
