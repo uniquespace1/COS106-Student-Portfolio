@@ -1,38 +1,45 @@
-function addTask() {
+const form=document.getElementById("taskForm");
+const input=document.getElementById("taskInput");
+const list=document.getElementById("taskList");
 
-let input = document.getElementById("taskInput");
+form.addEventListener("submit",function(e){
 
-let task = input.value.trim();
+e.preventDefault();
 
-if(task === ""){
-    alert("Please enter a task.");
-    return;
-}
+if(input.value.trim()=="") return;
 
-let li = document.createElement("li");
+const li=document.createElement("li");
 
-li.innerHTML = `
-${task}
-<button onclick="completeTask(this)">Complete</button>
-<button onclick="deleteTask(this)">Delete</button>
+li.innerHTML=`
+<span>${input.value}</span>
+
+<button class="done">✓</button>
+
+<button class="delete">🗑</button>
 `;
 
-document.getElementById("taskList").appendChild(li);
+list.appendChild(li);
 
-input.value = "";
+input.value="";
+
+});
+
+list.addEventListener("click",function(e){
+
+if(e.target.classList.contains("done")){
+
+const text=e.target.parentElement.querySelector("span");
+
+text.style.textDecoration="line-through";
+
+text.style.color="green";
+
+}
+
+if(e.target.classList.contains("delete")){
+
+e.target.parentElement.remove();
 
 }
 
-function completeTask(button){
-
-button.parentElement.style.textDecoration = "line-through";
-
-button.parentElement.style.color = "green";
-
-}
-
-function deleteTask(button){
-
-button.parentElement.remove();
-
-}
+});
