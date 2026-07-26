@@ -3,41 +3,78 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Academic Planner</title>
+<title>Study Planner</title>
 <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
 <header>
-<h1>Academic Planner</h1>
 
-<nav>
-<a href="index.html">Home</a>
-<a href="about.html">About</a>
-<a href="projects.html">Projects</a>
-<a href="planner.html">Planner</a>
-<a href="contact.html">Contact</a>
+<nav class="navbar">
+
+<h2 class="logo">Awwal.</h2>
+
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="projects.html">Projects</a></li>
+<li><a href="planner.html">Planner</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+
 </nav>
 
 </header>
 
-<section class="hero">
+<section class="skills">
 
-<h2>My Task Planner</h2>
+<h2>Weekly Study Planner</h2>
 
-<input type="text" id="taskInput" placeholder="Enter a task">
+<div class="cards">
 
-<button onclick="addTask()">Add Task</button>
+<div class="card">
+<h3>Monday</h3>
+<p>✔ HTML & CSS Practice</p>
+</div>
 
-<ul id="taskList"></ul>
+<div class="card">
+<h3>Tuesday</h3>
+<p>✔ JavaScript Practice</p>
+</div>
+
+<div class="card">
+<h3>Wednesday</h3>
+<p>✔ Git & GitHub</p>
+</div>
+
+<div class="card">
+<h3>Thursday</h3>
+<p>✔ Build Mini Projects</p>
+</div>
+
+<div class="card">
+<h3>Friday</h3>
+<p>✔ Revise Notes</p>
+</div>
+
+<div class="card">
+<h3>Saturday</h3>
+<p>✔ Coding Challenges</p>
+</div>
+
+<div class="card">
+<h3>Sunday</h3>
+<p>✔ Rest & Plan Next Week</p>
+</div>
+
+</div>
 
 </section>
 
-<script src="js/planner.js"></script>
-
 <footer>
 
-<p>&copy; 2026 Awwal Muhammed</p>
+<p>© 2026 Awwal Muhammed</p>
 
 </footer>
 
