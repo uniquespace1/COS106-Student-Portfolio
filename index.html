@@ -1,33 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Student Portfolio</title>
-    <link rel="stylesheet" href="css/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Awwal Muhammed | Student Portfolio</title>
+<link rel="stylesheet" href="css/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
 <header>
-    <h1>Awwal Muhammed</h1>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="projects.html">Projects</a>
-        <a href="planner.html">Planner</a>
-        <a href="contact.html">Contact</a>
-    </nav>
+<nav class="navbar">
+<h2 class="logo">Awwal.</h2>
+
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="projects.html">Projects</a></li>
+<li><a href="planner.html">Planner</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+
+</nav>
 </header>
 
 <section class="hero">
-    <img src="profile.jpg" alt="Awwal Muhammed">
-    <h2>Software Engineering Student</h2>
-    <p>Welcome to my COS106 Assessment Portfolio.</p>
+
+<div class="left">
+
+<h3>Hello 👋</h3>
+
+<h1>Awwal Muhammed</h1>
+
+<h2 id="typing"></h2>
+
+<p>
+
+Software Engineering student passionate about Web Development,
+Programming and Technology.
+
+I enjoy building responsive websites and solving real-world problems using code.
+
+</p>
+
+<a href="about.html" class="btn">Learn More</a>
+
+</div>
+
+<div class="right">
+
+<img src="profile.jpg" alt="Profile">
+
+</div>
+
+</section>
+
+<section class="skills">
+
+<h2>My Skills</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>HTML5</h3>
+<p>Semantic and modern webpage development.</p>
+</div>
+
+<div class="card">
+<h3>CSS3</h3>
+<p>Responsive layouts and beautiful UI.</p>
+</div>
+
+<div class="card">
+<h3>JavaScript</h3>
+<p>Interactive web applications.</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="media">
+
+<h2>Introduction</h2>
+
+<video controls width="350">
+<source src="intro.mp4" type="video/mp4">
+</video>
+
+<br><br>
+
+<audio controls>
+<source src="welcome.mp3" type="audio/mpeg">
+</audio>
+
 </section>
 
 <footer>
-    <p>&copy; 2026 Awwal Muhammed</p>
+
+<p>
+
+© 2026 Awwal Muhammed
+
+</p>
+
 </footer>
 
+<script>
+
+const words=["Software Engineering Student","Web Developer","Problem Solver"];
+
+let i=0;
+
+let j=0;
+
+let current="";
+
+let isDeleting=false;
+
+function type(){
+
+current=words[i];
+
+if(!isDeleting){
+
+document.getElementById("typing").innerHTML=current.substring(0,j++);
+
+if(j>current.length){
+
+isDeleting=true;
+
+setTimeout(type,1000);
+
+return;
+
+}
+
+}else{
+
+document.getElementById("typing").innerHTML=current.substring(0,j--);
+
+if(j==0){
+
+isDeleting=false;
+
+i=(i+1)%words.length;
+
+}
+
+}
+
+setTimeout(type,isDeleting?60:120);
+
+}
+
+type();
+
+</script>
+
 </body>
+
 </html>
