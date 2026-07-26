@@ -1,33 +1,36 @@
 document.getElementById("contactForm").addEventListener("submit", function(e){
 
-e.preventDefault();
+    e.preventDefault();
 
-let name = document.getElementById("name").value.trim();
-let email = document.getElementById("email").value.trim();
-let phone = document.getElementById("phone").value.trim();
-let message = document.getElementById("message").value.trim();
+    let name = document.getElementById("name").value.trim();
+    let email = document.getElementById("email").value.trim();
+    let phone = document.getElementById("phone").value.trim();
+    let message = document.getElementById("message").value.trim();
 
-if(name === "" || email === "" || phone === "" || message === ""){
-    alert("Please fill in all fields.");
-    return;
-}
+    if(name === "" || email === "" || phone === "" || message === ""){
+        alert("Please fill in all fields.");
+        return;
+    }
 
-let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-if(!emailPattern.test(email)){
-    alert("Please enter a valid email.");
-    return;
-}
+    if(!emailPattern.test(email)){
+        alert("Please enter a valid email.");
+        return;
+    }
 
-let phonePattern = /^[0-9]+$/;
+    // Remove spaces from phone number
+    let cleanPhone = phone.replace(/\s/g, "");
 
-if(!phonePattern.test(phone)){
-    alert("Phone number must contain only digits.");
-    return;
-}
+    let phonePattern = /^[0-9]{11}$/;
 
-alert("Message sent successfully!");
+    if(!phonePattern.test(cleanPhone)){
+        alert("Enter a valid 11-digit phone number.");
+        return;
+    }
 
-document.getElementById("contactForm").reset();
+    alert("Message sent successfully!");
+
+    document.getElementById("contactForm").reset();
 
 });
