@@ -213,13 +213,22 @@ opacity:1;
 @media(max-width:768px){
 
 .navbar{
-flex-direction:column;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 5%;
 }
 
 .navbar ul{
-flex-direction:column;
-text-align:center;
-padding-top:15px;
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:12px;
+padding-top:0;
+}
+
+.logo{
+font-size:22px;
 }
 
 .hero{
